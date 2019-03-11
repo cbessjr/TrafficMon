@@ -2,6 +2,7 @@
   "name": "trafficmon",
   "version": "0.1.0",
   "private": true,
+  "main": "server.js",
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
@@ -17,10 +18,15 @@
     "sequelize": "^4.41.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "client": "cd client && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd client && npm install",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "npm run build",
+    "eject": "cd client && react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
