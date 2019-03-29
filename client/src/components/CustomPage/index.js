@@ -13,10 +13,11 @@ export default function CustomPage(props) {
       <h1 className="text-center username">Welcome {props.username}!</h1>
       {props.reports.length ? (
         <SearchTable responsive>
-          <THead />
+          <THead allowDelete />
           <TBody>
             {props.reports.map(report => (
               <TRow
+                allowDelete
                 key={report.id}
                 type={report.type}
                 description={report.description}

@@ -10,7 +10,7 @@ export function SearchTable(props) {
 	);
 };
 
-export function THead(props) {
+export function THead({ allowDelete = false }) {
 	return (
 		<thead className="thead-dark">
 			<tr>
@@ -19,6 +19,9 @@ export function THead(props) {
 				<th scope="col">Location</th>
 				<th scope="col">City</th>
 				<th scope="col">State</th>
+				{allowDelete && (
+					<th scope="col">&nbsp;</th>
+				)}
 			</tr>
 		</thead>
 	);
@@ -32,14 +35,21 @@ export function TBody(props) {
 	);
 };
 
-export function TRow(props) {
+export function TRow({ allowDelete = false, ...props }) {
 	return (
-			<tr>
-				<td>{props.type}</td>
-				<td>{props.description}</td>
-				<td>{props.location}</td>
-				<td>{props.city}</td>
-				<td>{props.state}</td>
-			</tr>
+		<tr>
+			<td>{props.type}</td>
+			<td>{props.description}</td>
+			<td>{props.location}</td>
+			<td>{props.city}</td>
+			<td>{props.state}</td>
+			{allowDelete && (
+					<td>
+						<button type="button" class="close" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</td>
+				)}
+		</tr>
 	);
 };
