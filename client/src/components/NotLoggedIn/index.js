@@ -6,8 +6,7 @@ import ContainerDiv from '../ContainerDiv'
 function NotLoggedIn(props) {
 	return (
 		<ContainerDiv>
-			<div className="container">
-				<div className="row">
+			<div className="container backgroundcolor notloggedin">
 					<h1 className="display-4">Not Logged In</h1>
 					<p className="lead">Sorry! You have to be logged in in order to use this feature</p>
 					<hr className="my-4" />
@@ -20,7 +19,6 @@ function NotLoggedIn(props) {
 							<a className="btn btn-primary btn-lg" href="/new-user" role="button">Create an Account</a>
 						</div>
 				</div>
-			</div>
 		</ContainerDiv>
 	)
 }

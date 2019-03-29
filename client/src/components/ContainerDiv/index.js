@@ -4,9 +4,9 @@ import './style.css'
 function ContainerDiv(props) {
 
     return (
-        <div className="container backgroundColor">
+        <div className="container backgroundColor containerdiv">
             {props.children}
-        </div>
+         </div>
 
     )
 }

@@ -1,11 +1,7 @@
-/* .btn {
-  margin: 1rem 0 1rem 0;
-} */
-.jumbotron {
+.container.backgroundcolor.reportsearchform {
   background-color: lightblue;
-  width: 750px;
-  margin: 10px auto;
-  display: flex; 
-  justify-content: center;
   border: 8px solid #4285f4;
+  height: 300px;
+  margin: 3rem auto 6rem;
+
 }

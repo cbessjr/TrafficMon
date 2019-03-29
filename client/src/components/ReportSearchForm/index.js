@@ -10,7 +10,7 @@ const cityList = require("../../resources/index");
 
 function ReportSearchForm(props) {
 	return (
-		<ContainerDiv>
+		<div className="container backgroundcolor reportsearchform">
 			<Form>
 				<TypeAhead name="city" options={cityList} onChange={props.onTypeaheadChange} />
 				<Form.Group controlId="searchForm.StateSelect">
@@ -72,7 +72,7 @@ function ReportSearchForm(props) {
 					Submit
 		</Button>
 			</Form>
-		</ContainerDiv>
+</div>
 	);
 }
 
