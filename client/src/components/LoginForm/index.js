@@ -1,12 +1,14 @@
 import React from "react";
+import "./style.css";
 
 function LoginForm(props) {
   return (
+    <div className="container backgroundcolor loginform">
     <div className="text-center mb-4">
       <h1>
-        Log in to Traffic<span className="text-danger">Mon</span>!
+        Log in to Traffic<span className="text-danger h1">Mon</span>!
       </h1>
-      <form className="text-center" onSubmit={props.handleSubmit}>
+      <form className="text-center form" onSubmit={props.handleSubmit}>
         <label>
           <strong>User Name:</strong>
           <input
@@ -28,7 +30,7 @@ function LoginForm(props) {
         </label>
 
         <button
-          className="btn btn-primary ml-2"
+          className="btn btn-primary ml-4"
           onClick={props.onClick}
           variant="primary"
           size="sm"
@@ -36,6 +38,7 @@ function LoginForm(props) {
           Submit
         </button>
       </form>
+    </div>
     </div>
   );
 }

@@ -12,7 +12,7 @@ function NewUserForm(props) {
         className="d-flex justify-content-center"
         onSubmit={props.handleSubmit}
       >
-        <Row>
+        <Row className="row newuser">
           <Col lg={5} xs={12}>
             <label>
               User Name:
@@ -36,7 +36,7 @@ function NewUserForm(props) {
             </label>
           </Col>
 
-          <Button onClick={props.onClick} variant="primary" size="lg">
+          <Button className="button newuser" onClick={props.onClick} variant="primary" size="lg">
             Submit
               </Button>
         </Row>
