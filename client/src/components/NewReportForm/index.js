@@ -103,7 +103,7 @@ function NewReportForm(props) {
             </Form.Control>
           </Form.Group>
 
-          <Button className="float-right" variant="primary" type="submit" onClick={props.onClick}>
+          <Button className="float-right mb-3" variant="primary" type="submit" onClick={props.onClick}>
             Submit
           </Button>
         </Form>

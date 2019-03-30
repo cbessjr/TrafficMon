@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import GoogleMapReact from "google-map-react";
-import "../Map/style.css";
+import "./style.css";
 
 const MapMarker = ({ incident }) => {
   return (

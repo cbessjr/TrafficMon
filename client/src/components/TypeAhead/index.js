@@ -15,6 +15,7 @@ function TypeAhead(props) {
 					options={cityList}
 					placeholder="Choose a city..."
 					onInputChange={props.onChange}
+					onChange={props.onChange}
 				/>
 			</Form.Group>
 		</div>

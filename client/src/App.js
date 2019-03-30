@@ -4,7 +4,8 @@ import Home from "./pages/Home";
 import NewReport from "./pages/NewReport";
 import NewUser from "./pages/NewUser";
 import Search from "./pages/Search";
-import Login from "./pages/Login"
+import Login from "./pages/Login";
+import Logout from "./pages/Logout";
 import './App.css';
 import AppContext from './AppContext'
 
@@ -28,6 +29,7 @@ class App extends Component {
             <Route exact path="/new-user" component={NewUser} />
             <Route exact path="/search" component={Search} />
             <Route exact path="/login" component={Login} />
+            <Route exact path="/logout" component={Logout} />
           </Switch>
         </Router>
       </AppContext.Provider>

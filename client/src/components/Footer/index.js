@@ -4,7 +4,7 @@ import './style.css'
 export default function(props) {
   return (
     <footer>
-      <p class="text-center">
+      <p className="text-center">
         Developed By <a href="https://github.com/cbessjr">Charles Bess</a>,
         <a href="https://github.com/BrenKnigh">Brenden Knight</a>,
         <a href="https://github.com/jamesbarker585">James Barker</a>,

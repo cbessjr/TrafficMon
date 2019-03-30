@@ -34,7 +34,7 @@ router.route("/login")
 //Matches with "/api/users/logout"
 router.get("/logout", function (req, res) {
 	req.logout();
-	res.redirect("/");
+	res.redirect("/logout");
 });
 
 module.exports = router

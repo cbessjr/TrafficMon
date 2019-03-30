@@ -1,4 +1,5 @@
 import React from "react";
+import { Col, Row, Button } from "react-bootstrap";
 import "./style.css";
 
 function NewUserForm(props) {
@@ -7,40 +8,40 @@ function NewUserForm(props) {
       <div className="container background-color">
         <div className="backgroundColor">
           <h2 className="text-center">
-            Welcome to Traffic<span class="text-danger">Mon</span>!
+            Welcome to Traffic<span className="text-danger">Mon</span>!
           </h2>
           <form
             className="d-flex justify-content-center"
             onSubmit={props.handleSubmit}
           >
-            <label>
-              User Name:
-              <input
-                type="text"
-                name="userName"
-                value={props.value}
-                onChange={props.onChange}
-              />
-            </label>
+            <Row>
+              <Col lg={5} xs={12}>
+                <label>
+                  User Name:
+                  <input
+                    type="text"
+                    name="userName"
+                    value={props.values.userName}
+                    onChange={props.onChange}
+                  />
+                </label>
+              </Col>
+              <Col lg={5} xs={12}>
+                <label>
+                  Password:
+                  <input
+                    type="password"
+                    name="password"
+                    value={props.values.password}
+                    onChange={props.onChange}
+                  />
+                </label>
+              </Col>
 
-            <label>
-              Password:
-              <input
-                type="password"
-                name="password"
-                value={props.value}
-                onChange={props.onChange}
-              />
-            </label>
-
-            <button
-              className="btn btn-primary"
-              onClick={props.onClick}
-              variant="primary"
-              size="sm"
-            >
-              Submit
-            </button>
+              <Button onClick={props.onClick} variant="primary" size="lg">
+                Submit
+              </Button>
+            </Row>
           </form>
         </div>
       </div>
