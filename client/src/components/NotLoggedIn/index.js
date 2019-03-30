@@ -1,5 +1,4 @@
 import React from "react";
-import "./style.css";
 import ContainerDiv from "../ContainerDiv";
 import { Row, Col } from "react-bootstrap";
 
