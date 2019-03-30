@@ -1,14 +1,18 @@
 import React from "react";
-import "./style.css";
+import { Col, Row } from "react-bootstrap";
 
 function LoginForm(props) {
   return (
     <div className="container backgroundcolor loginform">
     <div className="text-center mb-4">
-      <h1>
-        Log in to Traffic<span className="text-danger h1">Mon</span>!
-      </h1>
-      <form className="text-center form" onSubmit={props.handleSubmit}>
+      <h2>
+        Log in to Traffic<span className="text-danger">Mon</span>!
+      </h2>
+      <h5 className="text-center">
+        Please log in to create reports and view or edit your
+        reports.
+      </h5>
+      <form className="text-center mt-4" onSubmit={props.handleSubmit}>
         <label>
           <strong>User Name:</strong>
           <input
@@ -28,15 +32,18 @@ function LoginForm(props) {
             onChange={props.onChange}
           />
         </label>
-
-        <button
-          className="btn btn-primary ml-4"
-          onClick={props.onClick}
-          variant="primary"
-          size="sm"
-        >
-          Submit
-        </button>
+        <Row>
+          <Col lg={10}>
+            <button
+              className="btn btn-primary ml-2 float-right"
+              onClick={props.onClick}
+              variant="primary"
+              size="sm"
+            >
+              Submit
+            </button>
+          </Col>
+        </Row>
       </form>
     </div>
     </div>
