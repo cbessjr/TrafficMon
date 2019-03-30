@@ -2,7 +2,6 @@ import React from 'react';
 import { Form, Button} from 'react-bootstrap';
 import TypeAhead from '../TypeAhead';
 import './style.css'
-import ContainerDiv from '../ContainerDiv';
 const cityList = require("../../resources/index");
 
 
