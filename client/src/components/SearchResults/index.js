@@ -45,7 +45,7 @@ export function TRow({ allowDelete = false, ...props }) {
 			<td>{props.state}</td>
 			{allowDelete && (
 					<td>
-						<button type="button" class="close" aria-label="Close">
+						<button type="button" onClick={props.delete} className="close" aria-label="Close">
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</td>

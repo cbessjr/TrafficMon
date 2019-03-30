@@ -45,7 +45,7 @@ class Home extends Component {
 
 	checkUserLogged = () => {
 		if (this.context.user.anonymous !== true) {
-			
+
 			customPage = (
 				<div>
 					<CustomPage
@@ -73,10 +73,13 @@ class Home extends Component {
 					});
 				} else {
 					console.log("No reports");
-				}
-			})
-	}
+				};
+			});
+	};
 
+	deleteUserReport = (reportId, userId) => {
+		
+	}
 
 	render() {
 		this.checkUserLogged();

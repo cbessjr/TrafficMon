@@ -18,6 +18,8 @@ export default function CustomPage(props) {
             {props.reports.map(report => (
               <TRow
                 allowDelete
+                delete={props.delete}
+                data-id={report.id}
                 key={report.id}
                 type={report.type}
                 description={report.description}

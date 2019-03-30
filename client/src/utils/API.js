@@ -17,6 +17,9 @@ export default {
 		},
 		createReport: function (reportData) {
 			return axios.post("/api/reports", reportData);
+		},
+		deleteReport: function (reportId, userId) {
+			return axios.delete("/api/reports/" + reportId)
 		}
 	},
 	users: {
