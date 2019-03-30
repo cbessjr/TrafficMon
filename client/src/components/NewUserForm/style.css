@@ -2,10 +2,8 @@
   height: 100vh;
 } */
 
-.container.backgroundcolor.newuser {
-  background-color: lightblue;
-  border: 8px solid #4285f4;
-  margin: 10rem auto 6rem;
-  height: 175px;
-  width: 600px;
+.newuser {
+  width: 675px;
+  padding: 2rem;
+  margin: 10rem auto 6rem
 }
