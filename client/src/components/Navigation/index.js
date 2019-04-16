@@ -1,16 +1,14 @@
 import React from "react";
 import "./style.css";
-import { Nav, ButtonGroup, Navbar } from "react-bootstrap";
+import { Nav, ButtonGroup, Navbar, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import API from "../../utils/API";
-import AppContext from '../../AppContext';
 
 var moment = require("moment");
 
 let dateAndTime;
 
 export default class Navigation extends React.Component {
-  static contextType = AppContext
 
   logoutClick = event => {
     event.preventDefault();
@@ -30,7 +28,6 @@ export default class Navigation extends React.Component {
     return (
       <Navbar expand="lg" bg="dark">
         <Navbar.Brand>
-
           <span className="text-warning">Traffic</span>
           <span className="text-danger">Mon</span>
         </Navbar.Brand>
@@ -57,29 +54,31 @@ export default class Navigation extends React.Component {
             </Link>
           </Nav.Link>
           <Nav>
-            {this.checkUserLogged}
-            <ButtonGroup
-              className="right btn btn-primary"
-              size="small"
-              variant="Login"
-            >
-              <Link to={"/login"}>
-                <strong className="text-white">Login</strong>
-              </Link>
-            </ButtonGroup>
-            <div className="divider" />
-            <ButtonGroup
-              className="right btn btn-danger"
-              variant="Logout"
-              onClick={this.logoutClick}
-            >
+            <Row>
+              <Col>
+                <ButtonGroup
+                  className="right btn btn-primary"
+                  size="small"
+                  variant="Login"
+                >
+                  <Link to={"/login"}>
+                    <strong className="text-white">Login</strong>
+                  </Link>
+                </ButtonGroup>
+                <div className="divider" />
+                <ButtonGroup
+                  className="right btn btn-danger"
+                  variant="Logout"
+                  onClick={this.logoutClick}
+                >
+                  <strong>Logout</strong>
+                </ButtonGroup>
 
-              <strong>Logout</strong>
-            </ButtonGroup>
-
-            <Navbar.Text className="text-primary ml-2" as="strong">
-              <strong>{dateAndTime}</strong>
-            </Navbar.Text>
+                <Navbar.Text className="text-primary ml-2" as="strong">
+                  <strong>{dateAndTime}</strong>
+                </Navbar.Text>
+              </Col>
+            </Row>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

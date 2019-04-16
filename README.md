@@ -142,23 +142,24 @@ Below are the screens of the application:
 
 
 
-![Image of Home Screen](https://github.com/cbessjr/Project-2/blob/master/public/img/Home_Screen.png)
+![Image of Home Screen](https://github.com/cbessjr/Project-3/blob/master/client/public/img/Home_Screen.png)
+
 
 <br>
 
-![Image of New User Screen](https://github.com/cbessjr/Project-2/blob/master/public/img/New_User_Screen.png)
+![Image of New User Screen](https://github.com/cbessjr/Project-3/blob/master/client/public/img/NewUser_Screen.png)
 
 <br>
 
-![Image of Search Screen](https://github.com/cbessjr/Project-2/blob/master/public/img/Search_Screen.png)
+![Image of Search Screen](https://github.com/cbessjr/Project-3/blob/master/client/public/img/Search_Screen.png)
 
 <br>
 
-![Image of New Report](https://github.com/cbessjr/Project-2/blob/master/public/img/New_Report_Screen.png)
+![Image of New Report](https://github.com/cbessjr/Project-3/blob/master/client/public/img/NewReport_Screen.png)
 
 <br>
 
-![Image of Login Menu](https://github.com/cbessjr/Project-2/blob/master/public/img/Login_Menu.png)
+![Image of Login Menu](https://github.com/cbessjr/Project-3/blob/master/client/public/img/Login_Screen.png)
 
 <br>
 
