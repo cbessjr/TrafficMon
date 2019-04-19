@@ -26,7 +26,7 @@ class NewUser extends Component {
 
       API.users
         .createUser({ userName, password })
-        .then(res => console.log(res.data))
+        .then(res => console.log(/* res.data */"User Created Successfully"))
         .catch(err => console.log(err));
     })
   };
