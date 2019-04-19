@@ -1,12 +1,17 @@
 import React from "react";
+import { Col, Row } from "react-bootstrap";
 
 function LoginForm(props) {
   return (
     <div className="text-center mb-4">
-      <h1>
+      <h2>
         Log in to Traffic<span className="text-danger">Mon</span>!
-      </h1>
-      <form className="text-center" onSubmit={props.handleSubmit}>
+      </h2>
+      <h5 className="text-center">
+        Please log in to create reports and view or edit your
+        reports.
+      </h5>
+      <form className="text-center mt-4" onSubmit={props.handleSubmit}>
         <label>
           <strong>User Name:</strong>
           <input
@@ -26,15 +31,18 @@ function LoginForm(props) {
             onChange={props.onChange}
           />
         </label>
-
-        <button
-          className="btn btn-primary ml-2"
-          onClick={props.onClick}
-          variant="primary"
-          size="sm"
-        >
-          Submit
-        </button>
+        <Row>
+          <Col lg={10}>
+            <button
+              className="btn btn-primary ml-2 float-right"
+              onClick={props.onClick}
+              variant="primary"
+              size="sm"
+            >
+              Submit
+            </button>
+          </Col>
+        </Row>
       </form>
     </div>
   );

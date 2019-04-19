@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Row, Button } from "react-bootstrap";
+import { Col, Row } from "react-bootstrap";
 import "./style.css";
 
 function NewUserForm(props) {
@@ -10,37 +10,38 @@ function NewUserForm(props) {
           <h2 className="text-center">
             Welcome to Traffic<span className="text-danger">Mon</span>!
           </h2>
-          <form
-            className="d-flex justify-content-center"
-            onSubmit={props.handleSubmit}
-          >
+          <h5 className="text-center">In order to create a report, you must create an account and log in.</h5>
+          <form className="text-center mt-4 mb-4" onSubmit={props.handleSubmit}>
+        
+            <label>
+              <strong>User Name:</strong>
+              <input
+                type="text"
+                name="userName"
+                value={props.values.userName}
+                onChange={props.onChange}
+              />
+            </label>
+           
+            <label>
+              <strong className="ml-2">Password:</strong>
+              <input
+                type="password"
+                name="password"
+                value={props.values.password}
+                onChange={props.onChange}
+              />
+            </label>
+            
             <Row>
-              <Col lg={5} xs={12}>
-                <label>
-                  User Name:
-                  <input
-                    type="text"
-                    name="userName"
-                    value={props.values.userName}
-                    onChange={props.onChange}
-                  />
-                </label>
+              <Col lg={10}>
+                <button
+                  onClick={props.onClick}
+                  className="btn btn-primary ml-2 float-right"
+                >
+                  Submit
+                </button>
               </Col>
-              <Col lg={5} xs={12}>
-                <label>
-                  Password:
-                  <input
-                    type="password"
-                    name="password"
-                    value={props.values.password}
-                    onChange={props.onChange}
-                  />
-                </label>
-              </Col>
-
-              <Button onClick={props.onClick} variant="primary" size="lg">
-                Submit
-              </Button>
             </Row>
           </form>
         </div>
