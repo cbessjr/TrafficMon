@@ -5,7 +5,7 @@ import './style.css'
 function WelcomePage(props) {
 
     return (
-        <div className="container backgroundColor text-center mt-4">
+        <div className="container backgroundColor welcomepage text-center mt-4">
             <h1>Traffic<span className="text-danger">Mon</span>!</h1>
             <p>Welcome to TrafficMon, the online traffic monitoring database!</p>
             <p>Here, Users can report and view reports on heavy traffic, accidents, road work, police radar units, and

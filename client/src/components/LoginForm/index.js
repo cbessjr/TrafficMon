@@ -3,6 +3,7 @@ import { Col, Row } from "react-bootstrap";
 
 function LoginForm(props) {
   return (
+    <div className="container backgroundcolor loginform">
     <div className="text-center mb-4">
       <h2>
         Log in to Traffic<span className="text-danger">Mon</span>!
@@ -44,6 +45,7 @@ function LoginForm(props) {
           </Col>
         </Row>
       </form>
+    </div>
     </div>
   );
 }
