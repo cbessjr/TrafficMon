@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export default {
-	//Gets all reports
+	//Handles API functions for Reports
 	reports: {
 		getReports: function () {
 			return axios.get("/api/reports");
@@ -17,8 +17,12 @@ export default {
 		},
 		createReport: function (reportData) {
 			return axios.post("/api/reports", reportData);
+		},
+		deleteReport: function (id) {
+			return axios.delete("/api/reports/" + id);
 		}
 	},
+	//Handles API functions for Users
 	users: {
 		createUser: function (userData) {
 			return axios.post("/api/users", userData);
@@ -33,5 +37,4 @@ export default {
 			return axios.get("/api/users/current-user");
 		}
 	}
-
 }

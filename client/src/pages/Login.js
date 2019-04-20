@@ -25,7 +25,7 @@ class Login extends Component {
 		event.preventDefault();
 		API.users.login(this.state)
 			.then(res => {
-				console.log(res.data)
+				console.log("Logged In Successfully")
 				if (res.data.userName) {
 					this.getUser();
 					this.props.history.push("/");
