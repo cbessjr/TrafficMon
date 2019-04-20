@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 import { Nav, ButtonGroup, Navbar, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import AppContext from '../../AppContext';
 import API from "../../utils/API";
 
 var moment = require("moment");
@@ -9,6 +10,38 @@ var moment = require("moment");
 let dateAndTime;
 
 export default class Navigation extends React.Component {
+  static contextType = AppContext
+
+  state = {
+    user: {}
+  }
+
+  componentDidMount() {
+    this.getUser();
+  }
+
+  getUser = () => {
+    API.users.getUser()
+      .then(
+        res => {
+          //console.log(res.data);
+          if (res.data.username && res.data.id) {
+            //this.context.setUser(res.data);
+            this.setState({
+              user: {
+                username: res.data.username,
+                id: res.data.id
+              }
+            })
+            console.log(this.context.user.username);
+          }
+        }
+      ).catch(err => console.log(err));
+  };
+
+  // checkUserLogged = () => {
+  // 	if (this.context.user.anonymous !== true) {
+
 
   logoutClick = event => {
     event.preventDefault();
@@ -56,6 +89,10 @@ export default class Navigation extends React.Component {
           <Nav>
             <Row>
               <Col>
+                {this.context.user.anonymous !== true ?
+                  (
+                    <i className="fas fa-user"></i>
+                  ) : (
                 <ButtonGroup
                   className="right btn btn-primary"
                   size="small"
@@ -65,6 +102,7 @@ export default class Navigation extends React.Component {
                     <strong className="text-white">Login</strong>
                   </Link>
                 </ButtonGroup>
+                  )}
                 <div className="divider" />
                 <ButtonGroup
                   className="right btn btn-danger"
