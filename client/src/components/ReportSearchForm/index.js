@@ -11,7 +11,7 @@ function ReportSearchForm(props) {
 			<Form>
 				<TypeAhead name="city" options={cityList} onChange={props.onTypeaheadChange} />
 				<Form.Group controlId="searchForm.StateSelect">
-					<Form.Label>Select State to search by State</Form.Label>
+					<Form.Label><h2>Select State to search by State</h2></Form.Label>
 					<Form.Control name="state" onChange={props.onChange} as="select">
 						<option>Alabama</option>
 						<option>Alaska</option>
