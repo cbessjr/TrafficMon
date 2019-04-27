@@ -2,11 +2,9 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 import './style.css'
 
-const style = {
-  marginBottom: "2rem"
-};
-
-
+const style= {
+  marginBottom: '3rem'
+}
 function NewReportForm(props) {
   return (
 		<div className="container backgroundColor mt-4">
