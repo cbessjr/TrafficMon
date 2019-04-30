@@ -91,7 +91,7 @@ export default class Navigation extends React.Component {
               <Col>
                 {this.context.user.anonymous !== true ?
                   (
-                    <i className="fas fa-user"></i>
+                    null
                   ) : (
                 <ButtonGroup
                   className="right btn btn-primary"
