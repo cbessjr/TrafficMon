@@ -2,10 +2,13 @@ import React from "react";
 import { Form, Button } from "react-bootstrap";
 import './style.css'
 
+const style= {
+  marginBottom: '3rem'
+}
 function NewReportForm(props) {
   return (
 		<div className="container backgroundColor mt-4">
-        <Form>
+        <Form style={style}>
           <Form.Group controlId="trafficReport.ControlSelect1">
             <Form.Label>Report Type</Form.Label>
             <Form.Control as="select" name="type" onChange={props.onChange}>

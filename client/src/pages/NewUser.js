@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Navigation from "../components/Navigation";
+import { Alert } from "react-bootstrap";
 import NewUserForm from "../components/NewUserForm";
 import Footer from "../components/Footer";
 import API from "../utils/API";
@@ -9,26 +10,29 @@ class NewUser extends Component {
   state = {
     userName: "",
     password: ""
-	};
-	
-	
+  };
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
-	};
+  };
 
   handleFormSubmit = event => {
     event.preventDefault();
-    const { userName, password } = this.state
-    this.setState({ userName: '', password: ''}, () => {
-
+    const { userName, password } = this.state;
+    this.setState({ userName: "", password: "" }, () => {
       API.users
         .createUser({ userName, password })
-        .then(res => console.log(/* res.data */"User Created Successfully"))
+        .then(res => {
+          if (res.data) {
+            this.props.history.push("/login");
+          }
+          alert('Thank you for creating an account, please log in')
+        })
         .catch(err => console.log(err));
-    })
+    });
   };
 
   render() {
@@ -38,7 +42,7 @@ class NewUser extends Component {
         <NewUserForm
           values={this.state}
           onChange={this.handleInputChange}
-					onClick={this.handleFormSubmit}
+          onClick={this.handleFormSubmit}
         />
         <Footer />
       </div>
