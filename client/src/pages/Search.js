@@ -4,6 +4,7 @@ import ReportSearchForm from "../components/ReportSearchForm";
 import { SearchTable, THead, TBody, TRow } from "../components/SearchResults";
 import API from "../utils/API";
 import Footer from '../components/Footer';
+import ContainerDiv from '../components/ContainerDiv'
 import SearchResultsNo from "../components/SearchResults_No";
 
 class Search extends Component {
@@ -53,21 +54,25 @@ class Search extends Component {
 
 		if (this.state.results.length) {
 			console.log(this.state.results);
-			Container = <SearchTable>
-				<THead />
-				<TBody>
-					{this.state.results.map(report => (
-						<TRow
-							key={report.id}
-							type={report.type}
-							description={report.description}
-							location={report.location}
-							city={report.city}
-							state={report.state}
-						/>
-					))}
-				</TBody>
-			</SearchTable>
+			Container = (
+        <ContainerDiv>
+          <SearchTable>
+            <THead />
+            <TBody>
+              {this.state.results.map(report => (
+                <TRow
+                  key={report.id}
+                  type={report.type}
+                  description={report.description}
+                  location={report.location}
+                  city={report.city}
+                  state={report.state}
+                />
+              ))}
+            </TBody>
+          </SearchTable>
+        </ContainerDiv>
+      );
 		} else {
 			Container = (
 				<SearchResultsNo />
