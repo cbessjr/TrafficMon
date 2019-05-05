@@ -33,6 +33,7 @@ class NewReport extends Component {
       .createReport(this.state)
       .then(res => console.log(res))
       .catch(err => console.log(err));
+      this.props.history.push('/');
   };
 
   checkLoggedIn = () => {
