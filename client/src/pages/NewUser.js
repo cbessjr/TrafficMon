@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Navigation from "../components/Navigation";
-import { Alert } from "react-bootstrap";
 import NewUserForm from "../components/NewUserForm";
+import ContainerDiv from "../components/ContainerDiv";
 import Footer from "../components/Footer";
 import API from "../utils/API";
 import "../index.css";
@@ -29,7 +29,7 @@ class NewUser extends Component {
           if (res.data) {
             this.props.history.push("/login");
           }
-          alert('Thank you for creating an account, please log in')
+          alert("Thank you for creating an account, please log in");
         })
         .catch(err => console.log(err));
     });
@@ -39,11 +39,13 @@ class NewUser extends Component {
     return (
       <div>
         <Navigation />
-        <NewUserForm
-          values={this.state}
-          onChange={this.handleInputChange}
-          onClick={this.handleFormSubmit}
-        />
+        <ContainerDiv>
+          <NewUserForm
+            values={this.state}
+            onChange={this.handleInputChange}
+            onClick={this.handleFormSubmit}
+          />
+        </ContainerDiv>
         <Footer />
       </div>
     );

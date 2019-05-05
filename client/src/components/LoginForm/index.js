@@ -48,7 +48,7 @@ function LoginForm(props) {
         <Row>
           <Col lg={10}>
             <button
-              className="btn btn-primary ml-2 mt-4 float-right"
+              className="btn btn-primary ml-2 float-right"
               onClick={props.onClick}
               variant="primary"
               size="sm"

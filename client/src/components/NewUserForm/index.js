@@ -15,8 +15,8 @@ const formMargin = {
 
 function NewUserForm(props) {
   return (
-    <div className="container backgroundColor">
-      <h2 className="text-center">
+    <div className="text-center mb-4">
+      <h2>
         Welcome to Traffic<span className="text-danger">Mon</span>!
       </h2>
       <h5 className="text-center">
