@@ -1,6 +1,3 @@
-# Project-3
-P3-Team-3 Collaboration Project
-
 # Project Title: TrafficMon (Traffic Monitor)
 
 ## Team Members:
